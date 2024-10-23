@@ -1,0 +1,134 @@
+/* Estilos gerais que já existem */
+
+/* Centralizar o container na página */
+.fundamentos-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Duas colunas */
+    grid-gap: 15px; /* Espaçamento entre as colunas e linhas */
+    margin: 40px auto; /* Centraliza o container na página */
+    max-width: 1000px; /* Define o tamanho máximo do container */
+    justify-content: center; /* Centraliza os itens no container */
+}
+
+/* Estilo para cada item de fundamento */
+.fundamento-item {
+    background-color: transparent;
+    color: #403939;
+    border-radius: 10px;
+    display: flex;
+    justify-content: flex-start; /* Alinha itens à esquerda */
+    align-items: center;
+    padding: 20px;
+    height: auto;
+    margin: 10px;
+}
+
+/* Estilo para as imagens */
+.fundamento-item img {
+    width: 130px; /* Tamanho padrão para desktops */
+    height: auto; /* Mantém a proporção da imagem */
+    max-height: 100px; /* Limita a altura máxima */
+    border-radius: 5px;
+    object-fit: cover; /* Cobre o espaço disponível */
+}
+
+/* Estilo para a seção de texto */
+.fundamento-texto {
+    flex-grow: 1;
+    margin-left: 15px; /* Espaço entre a imagem e o texto */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+}
+
+/* Estilo para os títulos */
+.fundamento-texto h3 {
+    margin: 0;
+    color: #FF4500;
+    font-size: 18px;
+}
+
+/* Estilo para os parágrafos */
+.fundamento-texto p {
+    margin: 5px 0 0 0;
+    font-size: 14px;
+}
+
+/* Remove padding e margin do body */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: #f4f4f4;
+    min-height: 100vh;
+}
+
+/* Adicionando responsividade */
+
+/* Ajustes para tablets e dispositivos móveis (max-width: 768px) */
+@media (max-width: 768px) {
+    .fundamentos-container {
+        grid-template-columns: 1fr; /* Uma coluna em dispositivos móveis */
+        padding: 10px;
+        max-width: 100%; /* Para caber na largura da tela */
+    }
+
+    .fundamento-item {
+        flex-direction: row; /* Mantém imagem e texto lado a lado */
+        padding: 15px;
+        margin: 10px 0; /* Adiciona espaçamento entre os itens */
+    }
+
+    .fundamento-item img {
+        width: 100px; /* Tamanho reduzido para a imagem */
+        height: auto; /* Mantém a proporção */
+        max-height: 80px; /* Limita a altura máxima */
+        margin-right: 10px; /* Espaçamento entre a imagem e o texto */
+    }
+
+    .fundamento-texto {
+        margin-left: 10px; /* Margem para alinhamento adequado */
+        text-align: left; /* Mantém o texto alinhado à esquerda */
+    }
+
+    .fundamento-texto h3 {
+        font-size: 16px; /* Ajusta o tamanho do título */
+    }
+
+    .fundamento-texto p {
+        font-size: 12px; /* Ajusta o tamanho do parágrafo */
+    }
+}
+
+/* Ajustes para smartphones pequenos (max-width: 480px) */
+@media (max-width: 480px) {
+    .fundamentos-container {
+        grid-template-columns: 1fr; /* Uma coluna para telas bem pequenas */
+    }
+
+    .fundamento-item {
+        padding: 10px; /* Ajusta padding */
+    }
+
+    .fundamento-item img {
+        width: 70px; /* Tamanho ainda menor para a imagem */
+        height: auto; /* Mantém a proporção */
+        max-height: 50px; /* Limita a altura máxima */
+        margin-right: 5px; /* Espaçamento menor entre imagem e texto */
+    }
+
+    .fundamento-texto {
+        text-align: left; /* Mantém o texto alinhado à esquerda */
+    }
+
+    .fundamento-texto h3 {
+        font-size: 14px; /* Ajusta o tamanho do título */
+    }
+
+    .fundamento-texto p {
+        font-size: 10px; /* Ajusta o tamanho do parágrafo */
+    }
+}
